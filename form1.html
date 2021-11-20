@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!-- Coding by CodingLab | www.codinglabweb.com-->
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<title> Registration or Sign Up form in HTML CSS | CodingLab </title>-->
+    <link rel="stylesheet" href="style1.css">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="border">
+            <h2>User Profile</h2>
+        <form action="#">
+            <div class="innerWrapper">
+                <div class="left">
+                    <div class="input-box">
+                        <span class="details">Full Name</span>
+                        <input type="text" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Phone No.</span>
+                        <input type="text" placeholder="Phone text" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Email</span>
+                        <input type="text" placeholder="Enter your email" required>
+                    </div>
+                    <div class="input-box">
+                        <span for="">Password</span>
+                        <input type="password" placeholder="Enter Your password" required>
+                    </div>
+                    <div class="choice">
+                        <span class="details">Do You Have any vechicle ?</span>
+                        <div class="tick">
+                            <div class="line">
+                                <input type="checkbox" value="Delivery" name="game" onclick="myFun(this)"><span>
+                                    Delivery</span>
+                            </div>
+                            <div class="line">
+                                <input type="checkbox" value="Delivery" name="game" onclick="myFun(this)"><span>
+                                    Rideshare</span>
+                            </div>
+                            <div class="line">
+                                <input type="checkbox" value="Delivery" name="game" onclick="myFun(this)"><span> Both Of
+                                    The Above</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <span for="">Occupation</span>
+                        <div class="occupation">
+                            <input type="text" placeholder="Ocuupation" required>
+                        </div>
+                        
+                    </div>
+                    <div class="input-box">
+                        <span for="">Education</span>
+                        <div class="education">
+                            <input type="text" placeholder="SEE" required>
+                            <input type="text" placeholder="+2" required>
+                            <input type="text" placeholder="Bachelor" required>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="right">
+                    <div class="form-element">
+                        <input type="file" id="file-1" accept="image/*">
+                        <label for="file-1" id="file-1-preview">
+                          <img src="https://bit.ly/3ubuq5o" alt="">
+                          <div>
+                            <span>+</span>
+                          </div>
+                        </label>
+                    </div>
+                    <div class="image-title">
+                        <span for="">Upload An Image</span>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+        </div>
+        
+
+    <script>
+        function myFun(checkbox) {
+            var checkboxes = document.getElementsByName('game')
+            checkboxes.forEach((item) => {
+                if (item !== checkbox) item.checked = false
+            })
+        }
+
+        function previewBeforeUpload(id){
+            document.querySelector("#"+id).addEventListener("change",function(e){
+              if(e.target.files.length == 0){
+                return;
+              }
+              let file = e.target.files[0];
+              let url = URL.createObjectURL(file);
+              document.querySelector("#"+id+"-preview div").innerText = file.name;
+              document.querySelector("#"+id+"-preview img").src = url;
+            });
+          }
+          
+          previewBeforeUpload("file-1");
+    </script>
+
+</body>
+
+</html>

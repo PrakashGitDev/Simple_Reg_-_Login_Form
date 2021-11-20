@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<!-- Coding by CodingLab | www.codinglabweb.com-->
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<title> Registration or Sign Up form in HTML CSS | CodingLab </title>-->
+    <link rel="stylesheet" href="style2.css">
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <h2>Form 2</h2>
+        <form action="#">
+            <div class="choice">
+                <span class="details">1)Service Type?</span>
+                <div class="tick">
+                    <div class="line">
+                        <input type="checkbox" value="Delivery" name="game" onclick="myFun(this)"><span> Delivery</span>
+                    </div>
+                    <div class="line">
+                        <input type="checkbox" value="Delivery" name="game" onclick="myFun(this)"><span>
+                            Rideshare</span>
+                    </div>
+                    <div class="line">
+                        <input type="checkbox" value="Delivery" name="game" onclick="myFun(this)"><span> Both Of The
+                            Above</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="choice">
+                <span class="details">2)Your Vechicle Information</span><br>
+                <span class="details">Type</span>
+                <div class="tick">
+                    <div class="line">
+                        <input type="checkbox" value="Delivery" name="game" onclick="myFun(this)"><span> Bike</span>
+                    </div>
+
+                    <div class="line">
+                        <input type="checkbox" value="Delivery" name="game" onclick="myFun(this)"><span> Tampo</span>
+                    </div>
+
+                    <div class="line">
+                        <input type="checkbox" value="Delivery" name="game" onclick="myFun(this)"><span> Car</span>
+                    </div>
+                    <div class="line">
+                        <input type="checkbox" value="Delivery" name="game" onclick="myFun(this)"><span> Delivery</span>
+                    </div>
+                    <div class="line">
+                        <input type="checkbox" value="Delivery" name="game" onclick="myFun(this)"><span>
+                            Others...</span>
+                    </div>
+                </div>
+            </div>
+            <div class="input-box">
+                <span class="details">3)Number Plate</span>
+                <input type="text" placeholder="Number Plate" required>
+            </div>
+            <div class="input-box">
+                <span class="details">4)Brand</span>
+                <input type="text" placeholder="Brand" required>
+            </div>
+            <div class="input-box">
+                <span class="details">5)Seats</span>
+                <input type="text" placeholder="Details" required>
+            </div>
+            <div class="input-box">
+                <span class="details">6)Capacity</span>
+                <input type="text" placeholder="Capacity" required>
+            </div>
+            <div class="choice">
+                <span class="details">7)Which Location Do You Prefer?</span>
+                <div class="tick">
+                    <div class="line">
+                        <input type="checkbox" value="Delivery" name="game" onclick="myFun(this)"><span>
+                            Biratnagar</span>
+                    </div>
+
+                    <div class="line">
+                        <input type="checkbox" value="Delivery" name="game" onclick="myFun(this)"><span> Out Of
+                            Biratnagar</span>
+                    </div>
+                </div>
+            </div>
+            <div class="input-box">
+                <span class="details">8)Capacity</span>
+                <input type="text" placeholder="Phone text" required>
+            </div>
+            <div class="choice">
+                <span class="details">9)Are you available at night?</span>
+                <div class="tick">
+                    <div class="line">
+                        <input type="checkbox" value="Delivery" name="game" onclick="myFun(this)"><span> Yes</span>
+                    </div>
+                    <div class="line">
+                        <input type="checkbox" value="Delivery" name="game" onclick="myFun(this)"><span> No</span>
+                    </div>
+                </div>
+            </div>
+            <div class="input-box">
+                <span class="details">10)Which area or routes you travel most of the time ?</span>
+                <input type="text" placeholder="Routes" required>
+            </div>
+            <div class="image-wrapper">
+                <div class="image-title">
+                    <span class="details">11)Upload Your Vechicle and Lisence Image</span>
+                </div>
+                <div class="vechile-image">
+                    <div class="form-element">
+                        <input type="file" id="file-1" accept="image/*">
+                        <label for="file-1" id="file-1-preview">
+                            <img src="https://bit.ly/3ubuq5o" alt="">
+                            <div>
+                                <span>+</span>
+                            </div>
+                            <span for="">Front Image</span>
+                        </label>
+                    </div>
+
+                    <div class="form-element">
+                        <input type="file" id="file-2" accept="image/*">
+                        <label for="file-2" id="file-2-preview">
+                            <img src="https://bit.ly/3ubuq5o" alt="">
+                            <div>
+                                <span>+</span>
+                            </div>
+                            <span for="">Back Image</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="lisence-image">
+                    <div class="form-element">
+                        <input type="file" id="file-3" accept="image/*">
+                        <label for="file-3" id="file-3-preview">
+                            <img src="https://bit.ly/3ubuq5o" alt="">
+                            <div>
+                                <span>+</span>
+                            </div>
+                            <span for="">Lisence Image</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="lists">
+                <pre>
+<span class="details">12)Elegibility For The Offers</span>
+a)5 rides for first 100 users who
+       i)Likes/Follows the BATO page
+
+b)KYC Verification
+    i)Personal Information (+5 rides)
+        1)Citizenship Certificate Verification
+        2)License Certificate Verification
+        3)Email Verification
+
+    ii)Riders Information (6 month free subscription, membership cards)
+        1)Bluebook Verification
+        2)Insurance Verification
+            </pre>
+            </div>
+
+
+
+        </form>
+    </div>
+    <script>
+        function myFun(checkbox) {
+            var checkboxes = document.getElementsByName('game')
+            checkboxes.forEach((item) => {
+                if (item !== checkbox) item.checked = false
+            })
+        }
+
+        function previewBeforeUpload(id){
+            document.querySelector("#"+id).addEventListener("change",function(e){
+              if(e.target.files.length == 0){
+                return;
+              }
+              let file = e.target.files[0];
+              let url = URL.createObjectURL(file);
+              document.querySelector("#"+id+"-preview div").innerText = file.name;
+              document.querySelector("#"+id+"-preview img").src = url;
+            });
+          }
+          
+          previewBeforeUpload("file-1");
+          previewBeforeUpload("file-2");
+          previewBeforeUpload("file-3");
+    </script>
+</body>
+
+</html>
